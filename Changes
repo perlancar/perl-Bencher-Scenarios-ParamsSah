@@ -1,15 +1,4 @@
-0.002   2017-01-25  Released-By: PERLANCAR
+0.001   2020-05-08  Released-By: PERLANCAR
 
-	- No functional changes.
-
-        - [doc] Mention Data::Sah::Params 0.002's compile() option
-          want_source=>1.
-
-        - [build] Rebuild with updated Dist::Zilla::Plugin::Bencher::Scenario
-          (0.16) to add benchmarked modules as prereq with phase=x_benchmarks,
-          type=x_benchmarks.
-
-
-0.001   2016-05-26  Released-By: PERLANCAR
-
-        - First release.
+        - First release, modified from the older
+          Bencher-Scenarios-DataSahParams.
