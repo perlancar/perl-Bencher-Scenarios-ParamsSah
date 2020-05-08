@@ -38,12 +38,6 @@ our $scenario = {
             tags => ['int_int[]'],
         },
         {
-            name => 'Params::Sah(on_invalid-bool)-int_int[]',
-            module => 'Params::Sah',
-            code_template => q(state $validator = Params::Sah::gen_validator({on_invalid=>"bool"}, "int*", ["array*",of=>"int*"]); $validator->(<args>)),
-            tags => ['int_int[]'],
-        },
-        {
             name => 'Type::Params-int_int[]',
             module => 'Type::Params',
             code_template => q(use Type::Params qw(compile); use Types::Standard qw(Int ArrayRef); state $validator = compile(Int, ArrayRef[Int]); $validator->(@{<args>})),
@@ -60,12 +54,6 @@ our $scenario = {
             name => 'Params::Sah-str[]',
             module => 'Params::Sah',
             code_template => q(state $validator = Params::Sah::gen_validator(["array*",of=>"str*"]); $validator->(<args>)),
-            tags => ['str[]'],
-        },
-        {
-            name => 'Params::Sah(on_invalid-bool)-str[]',
-            module => 'Params::Sah',
-            code_template => q(state $validator = Params::Sah::gen_validator({on_invalid=>"bool"}, ["array*",of=>"str*"]); $validator->(<args>)),
             tags => ['str[]'],
         },
         {
