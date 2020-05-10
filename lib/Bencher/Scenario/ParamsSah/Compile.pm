@@ -13,8 +13,12 @@ our $scenario = {
     summary => 'Measure compilation speed',
     participants => [
         {
-            name => 'Params::Sah',
+            name => 'Params::Sah+Data::Sah',
             fcall_template => q(Params::Sah::gen_validator("int*", ["array*",of=>"int*"])),
+        },
+        {
+            name => 'Params::Sah+Data::Sah::Tiny',
+            fcall_template => q(Params::Sah::gen_validator({backend=>"Data::Sah::Tiny"}, "int*", ["array*",of=>"int*"])),
         },
         {
             name => 'Type::Params',
